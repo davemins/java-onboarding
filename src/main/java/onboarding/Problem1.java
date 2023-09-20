@@ -39,4 +39,30 @@ class Problem1 {
     }
     public static int solution(List<Integer> pobi, List<Integer> crong) {
 
+        List<Integer> pobiNumberList = new ArrayList<>();
+        List<Integer> crongNumberList = new ArrayList<>();
+
+        for (int pobiPagesNumber : pobi) {
+            pobiNumberList.add(sumResult(pobiPagesNumber));
+            pobiNumberList.add(mulResult(pobiPagesNumber));
+        }
+
+        for (int crongPagesNumber : crong) {
+            crongNumberList.add(sumResult(crongPagesNumber));
+            crongNumberList.add(mulResult(crongPagesNumber));
+        }
+
+        if (Collections.max(pobiNumberList) > Collections.max(crongNumberList)) {
+            return 1;
+        }
+        else if (Collections.max(pobiNumberList) < Collections.max(crongNumberList)) {
+            return 2;
+        }
+        else if (Collections.max(pobiNumberList) == Collections.max(crongNumberList)) {
+            return 0;
+        }
+        else {
+            return -1;
+        }
+    }
 }

@@ -1,3 +1,7 @@
+/*
+369 게임 손벽을 몇번 쳐야 하는지 return
+ */
+
 package onboarding;
 
 public class Problem3 {

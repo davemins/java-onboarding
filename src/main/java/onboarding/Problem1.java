@@ -9,13 +9,34 @@ exception : return -1
 
 package onboarding;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 class Problem1 {
+
+    public static int sumResult(int number) {
+        int sum = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            sum += digit;
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public static int mulResult(int number) {
+        int mul = 1;
+
+        while (number != 0) {
+            int digit = number % 10;
+            mul *= digit;
+            number /= 10;
+        }
+        return mul;
+    }
     public static int solution(List<Integer> pobi, List<Integer> crong) {
 
-
-        int answer = Integer.MAX_VALUE;
-        return answer;
-    }
 }

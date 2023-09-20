@@ -10,6 +10,14 @@ public class Problem2 {
 //        String answer = decoder(cryptogram);
 //        return answer;
     }
+    // 연속으로 중복된 문자가 있는 문자열 속 연속으로 중복된 문자를 제거하는 메소드
+    private static String decoder(String word) {
+        while (isWordFinished(word)) {
+            word = removeConsecutiveDuplicateCharacters(word);
+        }
+        return word;
+    }
+
 
     // 연속으로 중복된 문자가 있는지 확인하는 메소드
     private static boolean isWordFinished(String word) {

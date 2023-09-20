@@ -7,8 +7,8 @@ package onboarding;
 public class Problem2 {
     public static String solution(String cryptogram) {
 
-//        String answer = decoder(cryptogram);
-//        return answer;
+        String answer = decoder(cryptogram);
+        return answer;
     }
     // 연속으로 중복된 문자가 있는 문자열 속 연속으로 중복된 문자를 제거하는 메소드
     private static String decoder(String word) {

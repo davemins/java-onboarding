@@ -11,6 +11,19 @@ public class Problem2 {
 //        return answer;
     }
 
+    // 연속으로 중복된 문자가 있는지 확인하는 메소드
+    private static boolean isWordFinished(String word) {
+        for (int i = 1; i < word.length(); i++) {
+            char currentChar = word.charAt(i);
+            char previousChar = word.charAt(i - 1);
+
+            if (currentChar == previousChar) {
+                return true; // 연속으로 중복된 문자가 있다면 true 반환
+            }
+        }
+
+        return false;
+    }
 
 
     // 연속으로 중복된 문자를 제거하는 메소드

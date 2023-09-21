@@ -31,6 +31,7 @@ public class Problem3 {
             }
             number /= 10;
         }
+
         return count;
     }
 }

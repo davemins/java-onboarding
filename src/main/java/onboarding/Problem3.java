@@ -14,7 +14,13 @@ public class Problem3 {
         return answer;
     }
 
-
+    private static int clapResult(int number) {
+        int clapNum = 0;
+        for (int count = 0; count <= number; count++) {
+            clapNum += clapCount(count);
+        }
+        return clapNum;
+    }
 
     private static int clapCount(int number) {
         int count = 0;
